@@ -17,7 +17,7 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  padding: 48px;
+  padding: 48px 48px 30px 48px;
 
   position: fixed;
   width: 100%;
@@ -33,6 +33,7 @@ button {
   border: 1px solid #8B5CF6;
   background-color: transparent;
   color: white;
+  transition: background .3s;
 
   display: flex;
   align-items: center;
@@ -42,6 +43,13 @@ button {
   font-weight: 600;
   font-size: 16px;
   line-height: 125%;
+
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+}
+
+button:hover{
+  transform: scale(1.1);
 }
 
 #form-habits {
@@ -58,7 +66,6 @@ button {
   flex-direction: column;
 
   gap: 24px;
-
 }
 
 .habit {
@@ -111,11 +118,18 @@ input {
   border-radius: 8px;
 
   background: #18181B;
+
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
 }
 
 input:checked {
   background: #8B5CF6;
   border: 2px solid #A78BFA;
+}
+
+input:hover {
+  transform: scale(1.3) rotate(20deg);
 }
 
 @media (max-width: 570px) {
